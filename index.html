@@ -21,20 +21,21 @@
                     </div>
                     <div class="row">
                         <div class="col-md-5 mb-3">
-                            <label for="tdc-number" class="form-label">Card number</label>
+                            <label for="tdc-number" class="form-label">Card number*</label>
                             <input type="text" class="form-control" id="tdc-number" placeholder="XXXX-XXXX-XXXX-XXXX"
-                                maxlength="19" pattern="\d*" inputmode="numeric" required>
+                                maxlength="19" pattern="^\d{4}-\d{4}-\d{4}-\d{4}$" inputmode="numeric" required>
+                            <h6 class="small">Use "-"</h6>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                         </div>
                         <div class="col-md-3 mb-3">
-                            <label for="tdc-cvv" class="form-label">CVC number</label>
+                            <label for="tdc-cvv" class="form-label">CVC number*</label>
                             <input type="text" class="form-control" id="tdc-cvv" placeholder="CVC" maxlength="4"
                                 pattern="\d{3,4}" inputmode="numeric" required>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <label for="amount" class="form-label">Amount</label>
+                            <label for="amount" class="form-label">Amount*</label>
                             <div class="input-group">
                                 <span class="input-group-text">€</span>
                                 <input type="text" id="amount" class="form-control" aria-label="Amount" pattern="\d*"
@@ -44,12 +45,12 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label class="form-label" for="name">First Name</label>
-                            <input class="form-control" type="text" id="name" name="name">
+                            <label class="form-label" for="name">First Name*</label>
+                            <input class="form-control" type="text" id="name" name="name" required>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label class="form-label" for="lastName"> Last Name</label>
-                            <input class="form-control" type="text" id="lastName" name="lastName">
+                            <label class="form-label" for="lastName"> Last Name*</label>
+                            <input class="form-control" type="text" id="lastName" name="lastName" required>
                         </div>
                     </div>
                     <div class="row">
@@ -72,8 +73,8 @@
                         </div>
                     </div>
                     <div class="row">
-                        <h6>Payment Method</h6>
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-6 mb-3 required">
+                            <h6>Payment Method*</h6>
                             <div class="d-flex flex-wrap bg-secondary p-2 rounded">
                                 <div class="form-check form-check-inline">
                                     <label class="form-check-label" for="visa"><i
@@ -104,7 +105,7 @@
                                     style="height: 100px"></textarea>
                                 <label for="floatingTextarea2"></label>
                             </div>
-                            <h6 class="small">Add any notes here.</h6>
+                            <h6 class="small">*Required fields.</h6>
                         </div>
                     </div>
                 </div>
